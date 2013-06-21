@@ -84,47 +84,51 @@ map <Leader>j !python -m json.tool<CR>
 " 前回終了したカーソル行に移動
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
 
-"set nocompatible
-"filetype off
-" 
-"if has('vim_starting')
-"    set runtimepath+=~/.vim/bundle/neobundle.vim/
-"    call neobundle#rc(expand('~/.vim/bundle/'))
-"endif
-"
-"" 利用中のプラグインをNeoBundle
-"NeoBundle 'http://github.com/Shougo/neocomplcache'
-"NeoBundle 'http://github.com/Shougo/neosnippet'
-""NeoBundle 'http://github.com/Shogo/unite.vim'
-"NeoBundle 'http://github.com/scrooloose/nerdcommenter'
-"NeoBundle 'http://github.com/tpope/vim-surround'
-""NeoBundle 'http://github.com/thinca/vim-puickrun'
-"NeoBundle 'http://github.com/thinca/vim-ref'
-"NeoBundle 'http://github.com/kana/vim-fakeclip'
-"
-""ruby
+set nocompatible
+filetype off
+ 
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+    call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+
+" 利用中のプラグインをNeoBundle
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neocomplcache-rsense'
+NeoBundle 'Shogo/unite.vim'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'kana/vim-fakeclip'
+
+"ruby
 "NeoBundle 'vim-ruby/vim-ruby'
-"NeoBundle 'tpope/vim-rails'
-"NeoBundle 'tpope/vim-cucumber'
-"
-""haml
-"NeoBundle 'https://github.com/tpope/vim-haml'
-"
-""slim
-""NeoBundle "bbommarito/vim-slim.git"
-"NeoBundle "slim-template/vim-slim"
-"
-""js
-"NeoBundle 'pangloss/vim-javascript'
-"
-"" Color Scheme
-""NeoBundle 'altercation/vim-colors-solarized'
-" 
-"filetype plugin on
-"filetype indent on
-"   
-"" Color Scheme Configure:
-""syntax enable
-""set background=light
-""let g:solarized_termcolors=256
-""colorscheme solarized
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'ujihisa/unite-rake'
+NeoBundle 'basyura/unite-rails'
+NeoBundle 'taichouchou2/unite-rails_best_practices'
+
+"haml
+NeoBundle 'https://github.com/tpope/vim-haml'
+
+"slim
+"NeoBundle "bbommarito/vim-slim.git"
+NeoBundle "slim-template/vim-slim"
+
+"js
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'kchmck/vim-coffee-script'
+
+" Color Scheme
+"NeoBundle 'altercation/vim-colors-solarized'
+ 
+filetype plugin on
+filetype indent on
+   
+" Color Scheme Configure:
+"syntax enable
+"set background=light
+"let g:solarized_termcolors=256
+"colorscheme solarized
